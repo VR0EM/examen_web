@@ -1,0 +1,8 @@
+.active {
+    font-weight: bold;
+}
+
+table>tr>td:nth-child(2) {
+    font-weight: bold;
+}
+

@@ -1,0 +1,28 @@
+<div class="columns">
+    <div class="column"></div>
+    <div class="column">
+      <!-- 1. Dropdown keuzelijst met rovers -->
+      <div class="select">
+        <select>
+          <option></option> <!-- Laat deze lege optie in de lijst staan -->
+          @for (rover of rovers; track rover) {
+            <option (click)="setRover(rover)">{{rover.name}}</option>
+          }
+        </select>
+      </div>
+      <!-- 2. Ordered list met camera's van de gekozen rover -->
+      <div class="content">
+        <ol>
+          @for (camera of selectedRover?.cameras; track camera) {
+            <li><button class="button is-warning" (click)="setCamera(camera)">{{camera.full_name}}</button></li>
+          }
+        </ol>
+      </div>
+      <div class="content">
+        <!-- 3. Een afbeelding die gemaakt werd met het gekozen type camera -->
+        <img [src]="firstPhoto?.img_src" alt="">
+      </div>
+    </div>
+    <div class="column"></div>
+  </div>
+  

@@ -1,0 +1,40 @@
+<div class="columns">
+    <div class="column"></div>
+    <div class="column">
+      <div class="field">
+        <label>Naam</label>
+        <input class="input" placeholder="Geef je naam" [(ngModel)]="naam" (input)="enterName()">
+      </div>
+  
+      <div class="field">
+        <label>E-mail</label>
+        <input class="input" placeholder="Geef je e-mail adres" [(ngModel)]="email" (blur)="validate()">
+      </div>
+  
+      <div class="field">
+        <label>Datum</label>
+          @if (started) {
+          <input class="input" value="{{datum | date : 'dd-MM-yyyy'}}" disabled>
+          }@else {
+          <input class="input" value="" disabled>
+          }
+      </div>
+  
+      <div class="field">
+        <label>Tijd</label>
+          @if (started) {
+          <input class="input" value="{{datum | date : 'h:mm:ss'}}" disabled>
+          }@else {
+          <input class="input" value="" disabled>
+          }
+        </div>
+  
+        @if (!validated) {
+      <div class="notification is-danger">
+        Het email adres is ongeldig, <br>zorg ervoor dat het een &#64; en een . bevat
+      </div>
+    }
+    </div>
+    <div class="column"></div>
+  </div>
+  
