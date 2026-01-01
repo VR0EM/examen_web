@@ -1,0 +1,18 @@
+<h2 class="text-xl font-bold mb-4">Your Order</h2>
+@if (orderedItems.length === 0) {Empty shopping cart}
+<ul class="space-y-2">
+  @for (item of orderedItems; track item) {
+  <li class="flex justify-between items-center">
+    <div class="flex-1">
+      <h3 class="font-semibold">{{ item.name }}</h3>
+    </div>
+    <button
+      class="text-red-500 hover:text-red-700 mr-2"
+      (click)="removeItem(item)"
+    >
+      <i class="fa fa-trash"></i>
+    </button>
+    <span class="font-bold">{{ item.price | currency : "EUR" }}</span>
+  </li>
+  }
+</ul>
