@@ -1,0 +1,40 @@
+<h2>{{ title }}</h2>
+
+<div class="filters">
+  <label for="runType">Filter type:</label>
+  <select id="runType" #runType [value]="selectedRunType" (change)="onRunTypeChange(runType.value)">
+    <option value="">Alle</option>
+    @for (type of runTypes; track type) {
+      <option [value]="type">{{ type }}</option>
+    }
+  </select>
+
+  @if (selectedRunType) {
+    <button type="button" (click)="onRunTypeChange('')">Wis filter</button>
+  }
+</div>
+
+@if (addedBanner) {
+  <div class="success">
+    Entry succesvol toegevoegd.
+  </div>
+}
+@if (removedBanner) {
+  <div class="warning">
+    Entry verwijderd.
+  </div>
+}
+
+@if (entries.length === 0) {
+  <p>Geen entries gevonden.</p>
+}
+@else {
+  <app-tijdsrpe [entries]="entries"></app-tijdsrpe>
+  <section>
+    @for (entry of entries; track entry.id) {
+      <app-diary-entry [entry]="entry"></app-diary-entry>
+    }
+  </section>
+}
+
+

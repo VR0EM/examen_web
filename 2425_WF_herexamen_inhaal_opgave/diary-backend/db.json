@@ -1,0 +1,49 @@
+{
+    "entries": [
+      {
+        "id": 1,
+        "date": "2025-08-01",
+        "runType": "Easy",
+        "actualDistanceKm": 5,
+        "actualDurationMin": 30,
+        "sRPE": 3,
+        "notes": "Loslopen in het park."
+      },
+      {
+        "id": 2,
+        "date": "2025-08-02",
+        "runType": "Interval",
+        "actualDistanceKm": 8,
+        "actualDurationMin": 45,
+        "sRPE": 7,
+        "notes": "6x800m aan 5k-tempo."
+      },
+      {
+        "id": 3,
+        "date": "2025-08-03",
+        "runType": "Long",
+        "actualDistanceKm": 18,
+        "actualDurationMin": 110,
+        "sRPE": 6,
+        "notes": "Lange duurloop, laatste 5km wind tegen."
+      },
+      {
+        "id": 4,
+        "date": "2025-08-04",
+        "runType": "Threshold",
+        "actualDistanceKm": 10,
+        "actualDurationMin": 55,
+        "sRPE": 8,
+        "notes": "3x10min drempel met 2min jog."
+      },
+      {
+        "id": 5,
+        "date": "2025-08-05",
+        "runType": "MP",
+        "actualDistanceKm": 12,
+        "actualDurationMin": 60,
+        "sRPE": 6,
+        "notes": "Marathon pace blokken."
+      }
+    ]
+  }

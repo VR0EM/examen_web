@@ -1,0 +1,45 @@
+<h2>Activiteit wijzigen</h2>
+
+<form (submit)="onSubmit(date.value, runType.value, actualDistanceKm.value, actualDurationMin.value, sRPE.value, notes.value); $event.preventDefault()">
+  <div class="form-group">
+    <label for="date">Datum</label>
+    <input id="date" #date type="date" value="{{ entry?.date }}" />
+  </div>
+
+  <div class="form-group">
+    <label for="runType">Type training</label>
+    <select id="runType" #runType value="{{ entry?.runType }}">
+      @for (type of runTypes; track type) {
+        <option [value]="type">{{ type }}</option>
+      }
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="actualDistanceKm">Afstand (km)</label>
+    <input id="actualDistanceKm" #actualDistanceKm type="number" min="0" step="0.1" value="{{ entry?.actualDistanceKm }}" />
+  </div>
+
+  <div class="form-group">
+    <label for="actualDurationMin">Duur (min)</label>
+    <input id="actualDurationMin" #actualDurationMin type="number" min="0" step="1" value="{{ entry?.actualDurationMin }}" />
+  </div>
+
+  <div class="form-group">
+    <label for="sRPE">sRPE (1–10)</label>
+    <input id="sRPE" #sRPE type="number" min="1" max="10" step="1" value="{{ entry?.sRPE }}" />
+  </div>
+
+  <div class="form-group">
+    <label for="notes">Notities</label>
+    <textarea id="notes" #notes rows="3">{{ entry?.notes }}</textarea>
+  </div>
+
+  <button type="submit">Opslaan</button>
+
+  @if(submissionError) {
+    <div class="error"><p>{{ submissionError }}</p></div>
+  }
+</form>
+
+

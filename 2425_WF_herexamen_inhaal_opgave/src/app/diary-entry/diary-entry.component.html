@@ -1,0 +1,21 @@
+@if (entry) {
+  <article class="entry">
+    <header>
+      <h3>{{ entry.date | date: 'longDate' }}</h3>
+    </header>
+    <section>
+      <p >Type: {{ entry.runType }}</p>
+      <p>Afstand: {{ entry.actualDistanceKm }} km</p>
+      <p>Duur: {{ entry.actualDurationMin }} min</p>
+      <p>sRPE: {{ entry.sRPE }}</p>
+      @if (entry.notes) {
+        <p class="notes">Notities: {{ entry.notes }}</p>
+      }
+    </section>
+    <footer>
+      <a [routerLink]="['/diary', entry.id]">Details</a>
+    </footer>
+  </article>
+}
+
+

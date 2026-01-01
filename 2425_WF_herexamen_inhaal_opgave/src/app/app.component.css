@@ -1,0 +1,23 @@
+nav {
+  border-bottom: 1px solid #F07561;
+  display: flex;
+  align-items: center;}
+
+nav a {
+  text-decoration: none;
+  color: #F07561;
+  padding: 1rem 2rem;
+  border-right: 1px solid #F07561;}
+
+nav a:hover {
+  background-color: #F07561;
+  color: #fff;}
+
+nav a.active {
+  background-color: #F07561;
+  color: #fff;}
+
+main {
+    padding: 2rem;
+    line-height: 1.5;
+}

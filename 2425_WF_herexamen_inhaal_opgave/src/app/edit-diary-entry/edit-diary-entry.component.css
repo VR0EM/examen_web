@@ -1,0 +1,45 @@
+h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;} 
+
+.form-group {
+  margin-bottom: 0.75rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 0.4rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.error {
+  color: #b3261e;
+}
+
+button {
+    font-size: 1rem;
+    padding: 0.25rem 0.75rem;
+    border: 1px solid #F07561;
+    background-color: #F07561;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+
+
+/* Eenvoudige, globale typografie voor gebruikte formelementen */
+input, select, textarea, button, label {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+}
+
+
