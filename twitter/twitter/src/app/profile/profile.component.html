@@ -1,0 +1,30 @@
+@if (profile) {
+<div class="layout">
+  <app-leftnav></app-leftnav>
+  <!-- main section start -->
+  <main style="position: relative">
+    <div class="header">
+      <h2 [textContent]="profile.name"></h2>
+    </div>
+
+    <img class="profile_banner" [src]="banner" />
+    <img class="profile_avatar" [src]="avatar" />
+    <section class="profile">
+      <div class="profile_name" [textContent]="profile.name"></div>
+      <div class="profile_handle" [textContent]="profile.handle"></div>
+      <div class="profile_bio" [textContent]="profile.bio"></div>
+    </section>
+
+    <section class="posts">
+      @for (tweet of tweets; track tweet) {
+      <app-tweets [tweet]="tweet"></app-tweets>
+      }
+    </section>
+  </main>
+  <!-- main section end -->
+
+  <app-rightnav></app-rightnav>
+</div>
+}@else {
+<div>This user does not exist</div>
+}

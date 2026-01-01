@@ -1,0 +1,33 @@
+<div class="layout">
+  <app-leftnav></app-leftnav>
+
+  <!-- main section start -->
+  <main>
+    <div class="header">
+      <h2>Home</h2>
+    </div>
+
+    <div class="tweet_box">
+      <form method="post" action="/">
+        <div class="tweet_box-input">
+          <img src="/images/avatars/JonDoe.png" alt="profile image" />
+          <textarea
+            rows="4"
+            cols="40"
+            placeholder="What's happening?"
+            name="text"
+          ></textarea>
+          <button>Tweet</button>
+        </div>
+      </form>
+    </div>
+
+    <section class="posts">
+      @for (tweet of tweets; track tweet) {
+      <app-tweets [tweet]="tweet"></app-tweets>
+      }
+    </section>
+  </main>
+  <!-- main section end -->
+  <app-rightnav></app-rightnav>
+</div>
